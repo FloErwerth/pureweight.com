@@ -1,0 +1,14 @@
+.picture:hover .picture-detail {
+    opacity: 1;
+}
+
+.picture-detail {
+    transition: opacity 0.5s;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    color: white;
+    background-color: #000000aa;
+}
+

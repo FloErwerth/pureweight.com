@@ -1,13 +1,18 @@
-import "./App.css";
-import { Header } from "./components/Header/Header.tsx";
-import { Main } from "./components/Main/Main.tsx";
+import { ThemeProvider } from "@/components/ThemeProvider.tsx";
+import { Header } from "@/components/Header.tsx";
+import { Main } from "@/pages/main.tsx";
+import { HeadlineContent } from "./components/HeadlineContent";
+import { Functions } from "@/components/Functions.tsx";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Main />
-    </>
+    <ThemeProvider defaultTheme="light" storageKey="theme">
+      <Main>
+        <Header />
+        <HeadlineContent />
+        <Functions />
+      </Main>
+    </ThemeProvider>
   );
 }
 
