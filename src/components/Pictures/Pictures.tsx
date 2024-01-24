@@ -1,18 +1,38 @@
-import { useEffect, useState } from "react";
 import { Picture } from "@/components/Pictures/Picture.tsx";
+import { useEffect, useMemo, useState } from "react";
 
-const getMockPics = () => {
-  const pics = [1, 2, 3];
+const pics = [1, 2, 3];
 
-  return Promise.all(pics.map(async () => await fetch(`https://picsum.photos/360/600`).then((res) => res.blob())));
+const useRandomAttention = () => {
+  const [random, setRandom] = useState(Math.random());
+  const isAttention = random > 0.9;
+
+  useEffect(() => {
+    if (!isAttention) {
+      setTimeout(() => {
+        setRandom(Math.random());
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        setRandom(Math.random());
+      }, 10000);
+    }
+  }, [random, isAttention]);
+
+  return useMemo(
+    () =>
+      isAttention
+        ? { class: "picture-detail-attention", index: Math.floor(Math.random() * 3) }
+        : undefined,
+    [isAttention],
+  );
 };
 
 export const Pictures = () => {
-  const [pics, setPics] = useState<string[] | undefined>();
-
-  useEffect(() => {
-    getMockPics().then((res) => setPics(res.map((blob) => URL.createObjectURL(blob))));
-  }, []);
-
-  return <div className="flex whitespace-break-spaces justify-evenly">{pics?.map((blob, index) => <Picture index={index} src={blob} />)}</div>;
+  const attentionClass = useRandomAttention();
+  return (
+    <div className="flex whitespace-break-spaces justify-evenly gap-3">
+      {pics?.map((_, index) => <Picture attention={attentionClass} index={index} />)}
+    </div>
+  );
 };

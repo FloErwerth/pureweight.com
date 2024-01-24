@@ -1,14 +1,66 @@
-.picture:hover .picture-detail {
-    opacity: 1;
+
+@keyframes picture-detail-attention-animation {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-25px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    65% {
+        transform: translateY(-15px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+}
+
+.picture-detail-attention {
+    animation: picture-detail-attention-animation 1000ms forwards ease-in-out;
+}
+
+.picture-detail-open {
+    transform: translateY(calc(-100% + 60px));
+}
+
+
+.picture-detail-background-anim::after {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.picture-detail::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 500ms ease-in-out;
 }
 
 .picture-detail {
-    transition: opacity 0.5s;
-    opacity: 0;
-    top: 0;
-    position: absolute;
-    height: 100%;
-    color: white;
-    background-color: #000000aa;
+    position: relative;
+    top: calc(100% - 60px);
+    transition: transform 500ms ease-in-out;
+    z-index: 1;
 }
 
+.picture {
+    height: 638px
+}
+
+.picture-details-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ddd;
+}
