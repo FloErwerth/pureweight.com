@@ -16,12 +16,20 @@ export const Header = () => {
 
   const handleToggleMenu = useCallback(() => {
     setShowMenu((prev) => !prev);
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document
+          .getElementById("img1")
+          ?.scrollIntoView({ behavior: "smooth", block: "end", inline: "center" });
+      });
+    }
     if (!showMenu) {
       document.body.className = "max-lg:overflow-hidden";
     } else {
       document.body.className = "max-lg:overflow-auto";
     }
-  }, [showMenu]);
+  }, [navigate, showMenu]);
 
   const handleNavigateHome = useCallback(() => {
     if (window.location.pathname !== "/") {
