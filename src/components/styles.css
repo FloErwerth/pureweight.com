@@ -1,0 +1,34 @@
+#cap1,
+#cap2,
+#cap3 {
+  view-transition-name: fade;
+}
+
+@keyframes shrink-x {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes grow-x {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+::view-transition-new(fade) {
+  animation: grow-x 0.25s;
+}
+::view-transition-old(fade) {
+  animation: shrink-x 0.25s;
+}

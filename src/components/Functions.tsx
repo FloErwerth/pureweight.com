@@ -1,82 +1,113 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.tsx";
-import Support_Logo from "@/media/support.svg";
-import Support_Logo_Dark from "@/media/support_dark.svg";
-import Design_Dark from "@/media/design_dark.svg";
-import Design from "@/media/design.svg";
-import Chart from "@/media/chart.svg";
-import ChartDark from "@/media/chart_dark.svg";
-import Tracking from "@/media/track.svg";
-import TrackingDark from "@/media/track_dark.svg";
-import { useThemeSpecific } from "@/hooks/useThemeSpecific.tsx";
+import graph from "../media/graph.png";
+import push_workout from "../media/push_workout.png";
+import overview from "../media/overview.png";
+import { useCallback, useMemo, useRef, useState } from "react";
+import "./styles.css";
+import { useViewTransition } from "@/hooks/useViewTransition";
 
 export const Functions = () => {
-  const Support = useThemeSpecific({ dark: Support_Logo, light: Support_Logo_Dark });
-  const DesignSvg = useThemeSpecific({ dark: Design, light: Design_Dark });
-  const ChartSvg = useThemeSpecific({ light: Chart, dark: ChartDark });
-  const TrackingSvg = useThemeSpecific({ light: Tracking, dark: TrackingDark });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const transitionView = useViewTransition();
+
+  const pic1Ref = useRef<HTMLButtonElement>(null);
+  const pic2Ref = useRef<HTMLButtonElement>(null);
+  const pic3Ref = useRef<HTMLButtonElement>(null);
+
+  const getImageClass = useCallback(
+    (index: number) => {
+      const base =
+        "lg:h-[600px] max-lg:h-[75vh] transition-all duration-300 hover:opacity-100 lg:scale-100 lg:hover:scale-105 cursor-pointer";
+      if (index === selectedIndex) {
+        return `${base} opacity-100 lg:scale-105`;
+      }
+      return `${base} opacity-50 scale-95`;
+    },
+    [selectedIndex],
+  );
+
+  const selectedText = useMemo(() => {
+    switch (selectedIndex) {
+      case 0:
+        return (
+          <div id="cap1">
+            <p className="text-center mb-2 text-[40px] max-lg:text-[25px] font-bold">
+              Einfaches Tracking
+            </p>
+            <div className="text-[26px] max-lg:text-[20px] text-center">
+              Tracke deinen Fortschritt im Gym schnell und einfach.
+            </div>
+          </div>
+        );
+      case 1:
+        return (
+          <div id="cap2">
+            <p className="text-center mb-2 text-[40px] max-lg:text-[25px] font-bold">
+              Fortschritt sehen
+            </p>
+            <div className="text-[26px] max-lg:text-[20px] text-center">
+              Zeige Graphen für deine abgeschlossenen Workouts an.
+            </div>
+          </div>
+        );
+
+      case 2:
+        return (
+          <div id="cap3">
+            <p className="text-center mb-2 text-[40px] max-lg:text-[25px] font-bold">
+              Behalte den Überblick
+            </p>
+            <div className="text-[26px] max-lg:text-[20px] text-center">
+              Erstelle und Organisiere deine Workouts und Übungen.
+            </div>
+          </div>
+        );
+    }
+  }, [selectedIndex]);
+
+  const handleSelect = useCallback(
+    (index: number) => {
+      if (index === selectedIndex) {
+        return;
+      }
+
+      if (document.documentElement.clientWidth < 1024) {
+        switch (index) {
+          case 0:
+            pic1Ref.current?.scrollIntoView({ behavior: "smooth", inline: "center", block: "end" });
+            break;
+          case 1:
+            pic2Ref.current?.scrollIntoView({ behavior: "smooth", inline: "center", block: "end" });
+            break;
+          case 2:
+            pic3Ref.current?.scrollIntoView({ behavior: "smooth", inline: "center", block: "end" });
+            break;
+        }
+      }
+
+      transitionView(() => setSelectedIndex(index));
+    },
+    [pic1Ref, pic2Ref, pic3Ref, selectedIndex, transitionView],
+  );
 
   return (
     <>
-      <div className="mt-[300px]" id="functions" />
-      <div className="grid grid-cols-4 gap-5 max-h-[300px]">
-        <div>
-          <div className="flex flex-col h-full items-center">
-            <img className="w-[50px] h-[50px] mb-5" src={TrackingSvg}></img>
-            <Card className="p-2 rounded-xl border-[#666]">
-              <CardHeader>
-                <CardTitle className="text-center">Einfaches tracken</CardTitle>
-              </CardHeader>
-              <CardContent className="flex p-2 flex-row justify-center items-center text-center">
-                Schnelle Eingaben sind wichtig. <br />
-                <br />
-                Pure Weight legt wert darauf eine einfache Handhabung zu haben und das Tracking
-                deines Fortschritts während des Trainings so einfach wie möglich zu machen
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-        <div className="flex flex-col h-full  items-center">
-          <img className="w-[50px] h-[50px]  mb-5" src={ChartSvg}></img>
-          <Card className="p-2 rounded-xl h-full border-[#666]">
-            <CardHeader>
-              <CardTitle className="text-center">Fortschritt sehen</CardTitle>
-            </CardHeader>
-            <CardContent className="flex p-2 flex-row justify-center items-center text-center">
-              Fortschritte sind wichtig und halten die Motivation hoch. <br />
-              <br />
-              Pure Weight errechnet aus deinen Daten die Übungen, in denen du dich am meisten
-              steigerst und zeigt diese in Prozent an. hast.
-            </CardContent>
-          </Card>
-        </div>
-        <div className="flex flex-col h-full  items-center">
-          <img className="w-[50px] h-[50px] mb-5" src={DesignSvg}></img>
-          <Card className="p-2 rounded-xl h-full border-[#666]">
-            <CardHeader>
-              <CardTitle className="text-center">Schlichtes Design</CardTitle>
-            </CardHeader>
-            <CardContent className="flex p-2 flex-row justify-center items-center text-center">
-              Der Fokus liegt auf dem Training. <br />
-              <br />
-              Pure Weight hat ein schlichtes Design, das dich nicht von deinem Training ablenkt. Es
-              gibt einen hellen und einen dunklen Modus.
-            </CardContent>
-          </Card>
-        </div>
-        <div className="flex flex-col h-full items-center">
-          <img className="w-[50px] h-[50px] mb-5" src={Support}></img>
-          <Card className="p-2 rounded-xl h-full  border-[#666]">
-            <CardHeader>
-              <CardTitle className="text-center">Herausragender Support</CardTitle>
-            </CardHeader>
-            <CardContent className="flex p-2 flex-row justify-center items-center text-center">
-              Du bist mit Probleme nicht alleine. <br />
-              <br />
-              Pure Weight bietet dir viele Möglichkeiten Probleme und Anregungen zur App zu melden.
-              Wir antworten Dir schnell.
-            </CardContent>
-          </Card>
-        </div>
+      <div className="h-[150px] max-lg:mb-5 justify-center relative flex">
+        <div id="functions" />
+        <div className="absolute max-lg:top-3 lg:-top-10">{selectedText}</div>
+      </div>
+      <div
+        style={{ scrollbarWidth: "none" }}
+        className="grid lg:justify-between grid-cols-[max-content_max-content_max-content] px-12 max-lg:overflow-x-auto max-lg:overflow-y-hidden"
+      >
+        <button ref={pic1Ref} id="img1" onClick={() => handleSelect(0)}>
+          <img className={getImageClass(0)} src={push_workout} alt="" />
+        </button>
+        <button ref={pic2Ref} id="img2" onClick={() => handleSelect(1)}>
+          <img className={getImageClass(1)} src={graph} alt="graph" />
+        </button>
+        <button ref={pic3Ref} id="img3" onClick={() => handleSelect(2)}>
+          <img className={getImageClass(2)} src={overview} alt="" />
+        </button>
       </div>
     </>
   );

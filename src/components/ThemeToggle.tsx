@@ -20,7 +20,7 @@ export function ThemeToggle() {
     <Button
       onClick={handleToggle}
       variant="destructive"
-      className="focus:outline-none hover:border-none w-14 h-8"
+      className="focus:outline-none hover:border-none w-14 h-8 max-md:hidden"
     >
       <Sun
         color="black"
