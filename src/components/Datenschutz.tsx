@@ -1,12 +1,383 @@
+import i18n from "@/translation";
 import { Link } from "./Link";
 import { Modal } from "./Modal";
+import { useTranslation } from "react-i18next";
 //adjust this text for the website, add headers, paragraphs spacing etc
 
-export const Datenschutz = () => {
+export const DatenschutzEnglisch = () => {
+  const { t } = useTranslation();
   return (
     <Modal
-      dialogTitle="Datenschutzerklärung"
-      Trigger={() => <Link classNames="text-[#ddd]" href="" text="Datenschutzerklärung" />}
+      dialogTitle={t("datenschutz")}
+      Trigger={() => <Link classNames="text-[#ddd]" href="" text={t("datenschutz")} />}
+    >
+      <div className="flex flex-col gap-10 *:text-[#ddd]">
+        <p>
+          <p>
+            <h2>1. Controller</h2> The controller within the meaning of the General Data Protection
+            Regulation (GDPR) and other national data protection laws of the member states as well
+            as other data protection regulations is:
+          </p>
+          <p>
+            <div>Florian Erwerth</div>
+            <div>Balanstraße 93</div>
+            <div>81539 München</div>
+            <div> Germany</div>
+            <br />
+            <div>Tel.: +49 157 30243460</div>
+            <div>
+              E‑Mail:
+              <a href="mailto:pureweight.app@gmail.com" />
+            </div>
+            <div>Website: https://pureweight.info</div>
+          </p>
+        </p>
+      </div>
+      <p>
+        <h2>2. General</h2>
+        <h3>2.1 Scope of processing of personal data</h3>
+        <p>We do not process any personal data of our users in Pure Weight.</p>
+        <h3>2.2. Legal basis for the processing of personal data</h3>
+        <p>
+          Even if Pure Weight does not process data, we are obliged to specify the legal basis for
+          the processing of personal data.
+          <br />
+          <br /> Data If the legal basis is not mentioned in our data protection declaration, the
+          processing of personal data is based on the following legal bases: Insofar as we obtain
+          the consent of the data subject for processing operations of personal data, Article 6 (1)
+          lit. a EU General Data Protection Regulation (GDPR) serves as the legal basis. When
+          processing personal data that is necessary for the performance of a contract to which the
+          data subject is a party, Article 6 (1) lit. b GDPR serves as the legal basis. This also
+          applies to processing operations that are necessary to carry out pre-contractual measures.
+          Insofar as the processing of personal data is necessary to fulfill a legal obligation to
+          which our company is subject, Article 6 (1) lit. c GDPR serves as the legal basis. In the
+          event that vital interests of the data subject or another natural person require the
+          processing of personal data, Article 6 (1) lit. d GDPR serves as the legal basis. If the
+          processing is necessary to safeguard a legitimate interest of our company or a third party
+          and the interests, fundamental rights and freedoms of the data subject do not outweigh the
+          first-mentioned interest, Article 6 (1) lit. f GDPR serves as the legal basis for the
+          processing.
+        </p>
+        <h3>2.3. Data deletion and storage duration</h3>
+        <p>Since no data is processed, there is also no storage period or deletion of data.</p>
+        <h2>3. Data that you enter yourself in the app</h2>
+        <h3>3.1. Description and scope of data processing</h3>
+        <p>
+          In order to be able to track workouts with Pure Weight, the following data must be stored
+          on the end device:
+          <p>
+            <li>Names of workouts</li>
+            <li>Names of exercises</li>
+            <li>Number of repetitions</li>
+            <li>Number of sets</li>
+            <li>Weight of exercises</li>
+            <li>Notes</li>
+          </p>
+          This data is then also used to present training progress.
+        </p>
+        <h3>3.2. Legal basis for data processing</h3>
+        <p>
+          The legal basis for the processing of the personal data that you enter yourself in the app
+          is Art. 6 para. 1 lit. b DSGVO, since the collection of this data is necessary for the
+          performance of a contract to which the user is a party or for the implementation of
+          pre-contractual measures.
+        </p>
+        <h3>3.3. Purpose of data processing</h3>
+        <p>We store data that you enter yourself in Pure Weight on the end device in order to:</p>
+        <p>
+          <li>show the training progress</li>
+          <li>display the training date and duration</li>
+          <li>to be able to display a summary of the previously completed training</li>
+          <li>show the measurement progress</li>
+        </p>
+        <h3>3.4. Duration of storage</h3>
+        <p>All data is deleted as soon as Pure Weight is uninstalled.</p>
+        <h3>3.5 Objection and elimination option</h3>
+        <p>
+          Since all data remains on the end device, the user has full control over the data
+          mentioned in point 3.1 and point 3.2 at all times. An objection or elimination option is
+          therefore not necessary.
+        </p>
+        <h2>4. Establishment of a contractual relationship</h2>
+        <h3>4.1. Description and scope of data processing</h3>
+        <p>
+          The subscription is concluded via the Apple-operated App Store. There, the relevant data
+          such as your e.g. your Apple ID or your payment information are processed and stored in
+          order to enable payment and use of the subscription.
+        </p>
+        <p>The privacy policy of Apple can be found here: https://www.apple.com/de/privacy</p>
+        <h3>4.2. Legal basis for data processing</h3>
+        <p>
+          The legal basis for the processing of personal data is Art. 6 para. 1 lit. b DSGVO, since
+          the collection of this data is necessary for the performance of a contract to which the
+          user is a party or for the implementation of pre-contractual measures.
+        </p>
+        <h3>4.3. Purpose of data processing</h3>
+        <p>
+          The processing of personal data serves the processing of the subscription and the payment.
+        </p>
+        <h3>4.4. Duration of storage</h3>
+        <p>
+          The duration of data storage can be found in Apple's privacy policy
+          (https://www.apple.com/de/privacy).
+        </p>
+        <h3>4.5 Objection and elimination option</h3>
+        <p>
+          Since the data is processed by Apple, the objection and elimination option can be found in
+          Apple's privacy policy. (https://www.apple.com/de/privacy).
+        </p>
+        <h2>5. Google Fonts</h2>
+        <p>
+          Our website uses Google Fonts fonts (Google LLC, 1600 Amphitheatre Parkway, Mountain View,
+          CA 94043, USA). The provider's privacy policy can be found here:
+          https://www.google.com/policies/privacy
+        </p>
+        <h2>6. Rights of the data subject</h2>
+
+        <h3>6.1 Auskunftsrecht</h3>
+        <p>
+          You can request confirmation from the person responsible as to whether personal data
+          concerning you is being processed by us. If such processing is available, you can request
+          information from the person responsible about the following information:
+        </p>
+        <p>
+          <li>the purposes for which the personal data are processed</li>
+          <li>the categories of personal data that are processed</li>
+          <li>
+            the recipients or the categories of recipients to whom the personal data concerning you
+            have been disclosed or are still being disclosed
+          </li>
+          <li>
+            the planned duration of the storage of the personal data concerning you or, if specific
+            information is not possible, criteria for determining the storage period
+          </li>
+          <li>
+            the existence of a right to correct or delete personal data concerning you, a right to
+            restrict processing by the person responsible or a right to object to this processing
+          </li>
+          <li>the existence of a right to lodge a complaint with a supervisory authority</li>
+          <li>
+            all available information on the origin of the data if the personal data are not
+            collected from you
+          </li>
+          <li>
+            the existence of automated decision-making, including profiling in accordance with Art.
+            22 Para. 1 and 4 GDPR and – at least in these cases – meaningful information about the
+            logic involved and the scope and intended effects of such processing for you.
+          </li>
+        </p>
+        <p>
+          You have the right to request information as to whether the personal data concerning you
+          is being transmitted to a third country or to an international organization. In this
+          context, you can request to be informed about the appropriate guarantees in accordance
+          with Art. 46 GDPR in connection with the transmission.
+        </p>
+        <h3>6.2. Right to rectification</h3>
+        <p>
+          You have the right to request the person responsible to correct and / or complete the
+          personal data concerning you immediately if the personal data concerning you is incorrect
+          or incomplete.
+        </p>
+        <h3>6.3. Right to restriction of processing</h3>
+        <p>
+          Under the following conditions, you can request the restriction of the processing of the
+          personal data concerning you:
+        </p>
+        <p>
+          <li>
+            if you dispute the accuracy of the personal data concerning you for a period that
+            enables the person responsible to check the accuracy of the personal data
+          </li>
+          <li>
+            the processing is unlawful and you refuse to delete the personal data and instead
+            request that the use of the personal data be restricted
+          </li>
+          <li>
+            the person responsible no longer needs the personal data for the purposes of processing,
+            but you need them to assert, exercise or defend legal claims, or
+          </li>
+          <li>
+            if you have objected to the processing in accordance with Art. 21 (1) GDPR and it is not
+            yet certain whether the legitimate reasons of the person responsible outweigh your
+            reasons.
+          </li>
+        </p>
+        <p>
+          If the processing of the personal data concerning you has been restricted, this data –
+          apart from its storage – may only be processed with your consent or for the purpose of
+          asserting, exercising or defending legal claims or protecting the rights of another
+          natural or legal person or for reasons of important public interest Union or a Member
+          State.
+        </p>
+      </p>
+      <h3>6.4. Right to erasure</h3>
+
+      <p>
+        a) Obligation to delete
+        <br />
+        You can request the person responsible to delete the personal data concerning you
+        immediately, and the person responsible is obliged to delete this data immediately if one of
+        the following reasons applies:
+        <li>
+          The personal data concerning you are no longer necessary for the purposes for which they
+          were collected or otherwise processed.
+        </li>
+        <li>
+          You revoke your consent on which the processing was based in accordance with Art. 6 Para.
+          1 lit. a or Art. 9 Para. 2 lit. a GDPR, and there is no other legal basis for the
+          processing.
+        </li>
+        <li>
+          You object to the processing in accordance with Art. 21 (1) GDPR and there are no
+          overriding legitimate reasons for the processing, or you object to the processing in
+          accordance with Art. 21 (2) GDPR.
+        </li>
+        <li>The personal data concerning you has been processed unlawfully.</li>
+        <li>
+          The deletion of the personal data concerning you is necessary to fulfill a legal
+          obligation under Union law or the law of the member states to which the person responsible
+          is subject.
+        </li>
+        <li>
+          The personal data concerning you was collected in relation to information society services
+          offered in accordance with Art. 8 (1) GDPR.
+        </li>
+        b) Information to third parties
+        <br />
+        If the person responsible has made the personal data concerning you public and is obliged to
+        delete it in accordance with Art. 17 (1) GDPR, he takes appropriate measures, including
+        technical measures, taking into account the available technology and the implementation
+        costs, to inform those responsible for data processing who process the personal data that
+        you as the data subject have requested the deletion of all links to this personal data or of
+        copies or replications of this personal data.
+        <br />
+        c) Exceptions
+        <br />
+        The right to deletion does not exist if the processing is necessary:
+        <li>to exercise the right to freedom of expression and information;</li>
+        <li>
+          to fulfill a legal obligation that requires processing under the law of the Union or of
+          the member states to which the person responsible is subject, or to perform a task that is
+          in the public interest or in the exercise of official authority that has been transferred
+          to the person responsible;
+        </li>
+        <li>
+          for reasons of public interest in the area of public health in accordance with Art. 9 (2)
+          lit. h and i and Art. 9 (3) GDPR;
+        </li>
+        <li>
+          for archiving purposes in the public interest, scientific or historical research purposes
+          or for statistical purposes in accordance with Art. 89 (1) GDPR, insofar as the right
+          mentioned under section a) is likely to make the realization of the goals of this
+          processing impossible or seriously impair it, or
+        </li>
+        <li>to assert, exercise or defend legal claims.</li>
+        <h3>6.5. Right to information</h3>
+        <p>
+          If you have exercised your right to correction, deletion or restriction of processing
+          against the person responsible, he is obliged to inform all recipients to whom the
+          personal data concerning you have been disclosed of this correction or deletion of the
+          data or restriction of processing, unless this proves to be impossible or involves a
+          disproportionate effort. You have the right to be informed about these recipients by the
+          person responsible.
+        </p>
+        <h3>6.6. Right to data portability</h3>
+        <p>
+          You have the right to receive the personal data concerning you that you have provided to
+          the person responsible in a structured, common and machine-readable format. You also have
+          the right to transfer this data to another person responsible without hindrance from the
+          person responsible to whom the personal data was provided, provided that
+          <li>
+            the processing is based on consent in accordance with Art. 6 Para. 1 lit. a GDPR or Art.
+            9 Para. 2 lit. a GDPR or on a contract in accordance with Art. 6 Para. 1 lit. b GDPR and
+          </li>
+          <li>the processing is carried out using automated procedures.</li>
+        </p>
+        <p>
+          In exercising this right, you also have the right to have the personal data concerning you
+          transmitted directly from one person responsible to another, insofar as this is
+          technically feasible. The freedoms and rights of other people must not be affected by
+          this.
+        </p>
+        <p>
+          The right to data portability does not apply to the processing of personal data necessary
+          for the performance of a task that is in the public interest or in the exercise of
+          official authority that has been transferred to the person responsible.
+        </p>
+        <h3>6.7. Right to object</h3>
+        <p>
+          You have the right, for reasons that arise from your particular situation, to object at
+          any time to the processing of the personal data concerning you, which is based on Article
+          6 (1) lit. e or f GDPR, to object; this also applies to profiling based on these
+          provisions. The person responsible will no longer process the personal data concerning you
+          unless he can demonstrate compelling legitimate reasons for the processing that outweigh
+          your interests, rights and freedoms, or the processing serves to assert, exercise or
+          defend legal claims. If the personal data concerning you is processed for direct marketing
+          purposes, you have the right to object at any time to the processing of the personal data
+          concerning you for the purpose of such advertising; this also applies to profiling insofar
+          as it is connected to such direct advertising. If you object to the processing for direct
+          marketing purposes, the personal data concerning you will no longer be processed for these
+          purposes. In connection with the use of information society services, you can exercise
+          your right to object using automated procedures that use technical specifications.
+        </p>
+        <h3>6.8. Right to revoke the data protection declaration of consent</h3>
+        <p>
+          You have the right to revoke your data protection declaration of consent at any time. By
+          revoking the consent, the legality of the processing carried out on the basis of the
+          consent until the revocation is not affected.
+          <h3>6.9. Automated decision in individual cases including profiling</h3>
+          You have the right not to be subject to a decision based solely on automated processing —
+          including profiling — which has legal effects on you or similarly significantly affects
+          you. This does not apply if the decision
+          <li>
+            is necessary for the conclusion or performance of a contract between you and the person
+            responsible,
+          </li>
+          <li>
+            is permissible on the basis of legal provisions of the Union or of the member states to
+            which the person responsible is subject and these legal provisions contain appropriate
+            measures to safeguard your rights and freedoms as well as your legitimate interests or
+          </li>
+          <li>is made with your express consent.</li>
+        </p>
+        <p>
+          However, these decisions may not be based on special categories of personal data according
+          to Art. 9 Para. 1 GDPR, unless Art. 9 Para. 2 lit. a or g GDPR applies and appropriate
+          measures have been taken to protect your rights and freedoms as well as your legitimate
+          interests. In the cases mentioned in paragraph 1, the person responsible takes appropriate
+          measures to safeguard your rights and freedoms as well as your legitimate interests,
+          including at least the right to obtain the intervention of a person on the part of the
+          person responsible, to state your own position and to challenge the decision.
+        </p>
+        <h3>6.10. Right to lodge a complaint with a supervisory authority</h3>
+        <p>
+          Without prejudice to any other administrative or judicial remedy, you have the right to
+          lodge a complaint with a supervisory authority, in particular in the member state of your
+          residence, your place of work or the place of the alleged violation, if you are of the
+          opinion that the processing of the personal data concerning you violates the GDPR. The
+          supervisory authority to which the complaint was submitted informs the complainant about
+          the status and the results of the complaint, including the possibility of a judicial
+          remedy in accordance with Art. 78 GDPR.
+        </p>
+        <h2>7. Change of the data protection declaration</h2>
+        <p>
+          We reserve the right to change or adapt this data protection declaration at any time in
+          compliance with the applicable data protection regulations. The last change to this data
+          protection regulation was made on February 12, 2021.
+        </p>
+      </p>
+    </Modal>
+  );
+};
+
+export const Datenschutz = () => {
+  const { t } = useTranslation();
+  const language = i18n.language;
+
+  const german = (
+    <Modal
+      dialogTitle={t("datenschutz")}
+      Trigger={() => <Link classNames="text-[#ddd]" href="" text={t("datenschutz")} />}
     >
       <div className="flex flex-col gap-10 *:text-[#ddd]">
         <p>
@@ -183,14 +554,14 @@ export const Datenschutz = () => {
               Garantien gem. Art. 46 DSGVO im Zusammenhang mit der Übermittlung unterrichtet zu
               werden.
             </p>
-            <h3>16.2. Recht auf Berichtigung</h3>
+            <h3>6.2. Recht auf Berichtigung</h3>
             <p>
               Du hast ein Recht auf Berichtigung und/oder Vervollständigung gegenüber dem
               Verantwortlichen, sofern die verarbeiteten personenbezogenen Daten, die dich
               betreffen, unrichtig oder unvollständig sind. Der Verantwortliche hat die Berichtigung
               unverzüglich vorzunehmen.
             </p>
-            <h3>16.3. Recht auf Einschränkung der Verarbeitung</h3>
+            <h3>6.3. Recht auf Einschränkung der Verarbeitung</h3>
             <p>
               Unter den folgenden Voraussetzungen kannst du die Einschränkung der Verarbeitung der
               dich betreffenden personenbezogenen Daten verlangen:
@@ -225,7 +596,7 @@ export const Datenschutz = () => {
               eines wichtigen öffentlichen Interesses der Union oder eines Mitgliedstaats
               verarbeitet werden.
             </p>
-            <h3>16.4. Recht auf Löschung</h3>
+            <h3>6.4. Recht auf Löschung</h3>
             <p>
               a) Löschungspflicht
               <br />
@@ -403,4 +774,6 @@ export const Datenschutz = () => {
       </div>
     </Modal>
   );
+
+  return language === "de" ? german : <DatenschutzEnglisch />;
 };

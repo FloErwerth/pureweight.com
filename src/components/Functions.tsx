@@ -4,11 +4,12 @@ import overview from "../media/overview.png";
 import { useCallback, useMemo, useRef, useState } from "react";
 import "./styles.css";
 import { useViewTransition } from "@/hooks/useViewTransition";
+import { useTranslation } from "react-i18next";
 
 export const Functions = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const transitionView = useViewTransition();
-
+  const { t } = useTranslation();
   const pic1Ref = useRef<HTMLButtonElement>(null);
   const pic2Ref = useRef<HTMLButtonElement>(null);
   const pic3Ref = useRef<HTMLButtonElement>(null);
@@ -31,10 +32,10 @@ export const Functions = () => {
         return (
           <div id="cap1">
             <p className="text-center mb-2 text-[40px] max-lg:text-[25px] font-bold">
-              Einfaches Tracking
+              {t("easy_tracking")}
             </p>
             <div className="text-[26px] max-lg:text-[20px] text-center">
-              Tracke deinen Fortschritt im Gym schnell und einfach.
+              {t("easy_tracking_subtitle")}
             </div>
           </div>
         );
@@ -42,10 +43,10 @@ export const Functions = () => {
         return (
           <div id="cap2">
             <p className="text-center mb-2 text-[40px] max-lg:text-[25px] font-bold">
-              Fortschritt sehen
+              {t("see_progress")}
             </p>
             <div className="text-[26px] max-lg:text-[20px] text-center">
-              Zeige Graphen für deine abgeschlossenen Workouts an.
+              {t("see_progress_subtitle")}
             </div>
           </div>
         );
@@ -54,10 +55,10 @@ export const Functions = () => {
         return (
           <div id="cap3">
             <p className="text-center mb-2 text-[40px] max-lg:text-[25px] font-bold">
-              Behalte den Überblick
+              {t("keep_overview")}
             </p>
             <div className="text-[26px] max-lg:text-[20px] text-center">
-              Erstelle und Organisiere deine Workouts und Übungen.
+              {t("keep_overview_subtitle")}
             </div>
           </div>
         );

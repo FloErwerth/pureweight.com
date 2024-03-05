@@ -1,10 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "./Link";
 import { MapPin, PhoneCall, Mail } from "lucide-react";
 
 export const Impressum = () => {
+  const { t } = useTranslation();
   return (
     <div>
-      <div className="text-[20px] text-[#aaa] font-bold">Impressum</div>
+      <div className="text-[20px] text-[#aaa] font-bold">{t("imprint")}</div>
       <div className="flex flex-col">
         <div className="flex flex-col">
           <div>
@@ -19,7 +21,7 @@ export const Impressum = () => {
               </div>
               <div className="flex items-center gap-2">
                 <PhoneCall />
-                <div>0157 / 30 24 34 60</div>
+                <div>+49157 / 30 24 34 60</div>
               </div>
               <div className="flex items-center gap-2">
                 <Mail />

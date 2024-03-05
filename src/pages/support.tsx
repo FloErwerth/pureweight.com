@@ -1,34 +1,29 @@
 import { Link } from "@/components/Link";
+import { useTranslation } from "react-i18next";
 
 export const Support = () => {
+  const { t } = useTranslation();
   return (
     <div className="h-[100vh] max-lg:px-2 lg:w-2/3 lg:mx-auto">
       <h2>Support</h2>
       <div className="pt-5">
-        Eine generelle Bedienhilfe findest Du innerhalb von Pure Weight unter{" "}
+        {t("support_content_1")}{" "}
         <span className="bg-[#222] text-[#ddd] p-1 rounded-[5px]">
           Einstellungen &#62; Bedienhilfe
         </span>
-        . Hier findest Du alle wichtigen Informationen zur Bedienung von Pure Weight. Am besten Du
-        nutzt die Filterfunktion, um schnell die passende Hilfe zu finden.
+        . {t("support_content_2")}.
       </div>
-      <div className="py-2">
-        Falls dein Anliegen nicht in der Bedienhilfe zu finden ist, kannst Du dich gerne an uns
-        wenden und dabei erwähnen, dass Du die Bedienhilfe bereits durchsucht hast. Dann fügen wir
-        diesen Punkt gerne hinzu.
-      </div>
+      <div className="py-2">{t("support_content_3")}</div>
       <div>
-        Für alle weitere Fragen kannst Du dich gerne an{" "}
+        {t("support_content_4")}{" "}
         <Link
           scrollsToAnchor={false}
           text="pureweight.app@gmail.com"
           href="mailto:pureweight.app@gmail.com"
-        />{" "}
-        wenden. Wir helfen Dir gerne so schnell wie möglich weiter.
+        />
+        . {t("support_content_5")}
       </div>
-      <div className="mt-4 font-bold">
-        Vielen Dank für dein Vertrauen und für die Nutzung von Pure Weight!
-      </div>
+      <div className="mt-4 font-bold">{t("support_content_6")}</div>
     </div>
   );
 };

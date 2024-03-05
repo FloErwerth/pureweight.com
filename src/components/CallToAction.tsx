@@ -1,4 +1,5 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { ClassNameValue, twMerge } from "tailwind-merge";
 
 type CallToActionProps = {
@@ -6,12 +7,10 @@ type CallToActionProps = {
   variant?: "normal" | "large";
   classNames?: ClassNameValue;
 };
-export const CallToAction = ({
-  classNames,
-  variant = "normal",
-  text = "Pure Weight testen",
-}: CallToActionProps) => {
+export const CallToAction = ({ classNames, variant = "normal" }: CallToActionProps) => {
+  const { t } = useTranslation();
   const handleEnrollToEmailList = useCallback(() => {
+    //TODO
     console.log("ENROLL");
   }, []);
 
@@ -21,6 +20,13 @@ export const CallToAction = ({
     variant === "large" && largeClasses,
     classNames,
   );
+  const text = useMemo(() => {
+    if (variant === "large") {
+      return t("test_now_long");
+    }
+    return t("test_now");
+  }, [t, variant]);
+
   return (
     <button onClick={handleEnrollToEmailList} className={mergedClasses}>
       {text}
