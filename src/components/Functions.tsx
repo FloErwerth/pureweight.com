@@ -17,7 +17,7 @@ export const Functions = () => {
   const getImageClass = useCallback(
     (index: number) => {
       const base =
-        "max-lg:h-[75vh] transition-all duration-300 hover:opacity-100 lg:scale-100 lg:hover:scale-105 cursor-pointer";
+        "max-lg:h-[75vh] lg:h-[600px] transition-all duration-300 hover:opacity-100 lg:scale-100 lg:hover:scale-105 cursor-pointer";
       if (index === selectedIndex) {
         return `${base} opacity-100 lg:scale-105`;
       }
@@ -96,30 +96,30 @@ export const Functions = () => {
 
   return (
     <>
-      <div className="h-[150px] max-lg:mb-5 justify-center relative flex">
+      <div className="justify-center relative flex mb-2 lg:mb-10">
         <div id="functions" />
-        <div className="absolute max-lg:top-3 lg:-top-10">{selectedText}</div>
+        <span>{selectedText}</span>
       </div>
       <div
         style={{ scrollbarWidth: "none" }}
-        className="grid lg:justify-between grid-cols-[max-content_max-content_max-content] px-[25vw] max-lg:overflow-x-auto max-lg:overflow-y-hidden"
+        className="grid lg:justify-between lg:h-fit grid-cols-[max-content_max-content_max-content] max-lg:px-[25vw] max-lg:overflow-x-auto max-lg:overflow-y-hidden"
       >
         <button
-          className="max-lg:h-[calc(75vh-40px)] overflow-hidden"
+          className="max-lg:h-[calc(75vh-40px)] max-lg:overflow-hidden"
           ref={pic1Ref}
           onClick={() => handleSelect(0)}
         >
           <img id="img1" className={getImageClass(0)} src={push_workout} alt="" />
         </button>
         <button
-          className="max-lg:h-[calc(75vh-40px)] overflow-hidden"
+          className="max-lg:h-[calc(75vh-40px)]  max-lg:overflow-hidden"
           ref={pic2Ref}
           onClick={() => handleSelect(1)}
         >
           <img id="img2" className={getImageClass(1)} src={graph} alt="graph" />
         </button>
         <button
-          className="max-lg:h-[calc(75vh-40px)] overflow-hidden"
+          className="max-lg:h-[calc(75vh-40px)]  max-lg:overflow-hidden"
           ref={pic3Ref}
           onClick={() => handleSelect(2)}
         >
