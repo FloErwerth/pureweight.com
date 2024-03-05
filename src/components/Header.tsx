@@ -7,12 +7,15 @@ import { useCallback, useMemo, useState } from "react";
 import { useTheme } from "@/components/ThemeProvider.tsx";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { LanguageToggle } from "./LanguageToggle";
 
 export const Header = () => {
   const { theme } = useTheme();
   const LogoUrl = useMemo(() => (theme === "light" ? Logo : Logo_Bright), [theme]);
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleToggleMenu = useCallback(() => {
     setShowMenu((prev) => !prev);
@@ -56,13 +59,16 @@ export const Header = () => {
           className={`${showMenu ? "max-lg:fixed transition-opacity max-lg:opacity-100 z-50" : "max-lg:opacity-0 max-lg:pointer-events-none"} max-lg:top-0 max-lg:w-[100vw] max-lg:h-[100vh] max-lg:flex-col max-lg:justify-center max-lg:dark:bg-[#333] max-lg:bg-[#eee] max-lg:left-0 items-center flex gap-5`}
         >
           <button onClick={handleToggleMenu} style={{ all: "unset" }}>
-            <Link scrollsToAnchor classNames="max-lg:text-[30px]" href="#img1" text="Funktionen" />
+            <Link scrollsToAnchor classNames="max-lg:text-[30px]" href="#img1" text="Features" />
           </button>
           <button style={{ all: "unset" }} onClick={handleNavigateSupport}>
             <Link classNames="max-lg:text-[30px]" href="" text="Support" />
           </button>
-          <CallToAction classNames="max-lg:text-[24px] max-lg:mt-5" text="Jetzt testen" />
-          <ThemeToggle />
+          <CallToAction classNames="max-lg:text-[24px] max-lg:mt-5" text={t("test_now")} />
+          <div className="flex flex-row gap-1 max-lg:gap-4">
+            <ThemeToggle />
+            <LanguageToggle />
+          </div>
         </div>
       </div>
       <div

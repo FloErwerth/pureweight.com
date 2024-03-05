@@ -7,6 +7,9 @@ import { FunctionAccordion } from "./components/FunctionsAccordion";
 import { Footer } from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Support } from "./pages/support";
+import "./translation";
+import * as i18n from "./translation";
+import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +39,16 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    const storedLanguage = sessionStorage.getItem("language");
+    if (storedLanguage) {
+      i18n.default.changeLanguage(storedLanguage);
+    } else {
+      i18n.default.changeLanguage("de");
+      sessionStorage.setItem("language", "de");
+    }
+  }, []);
+
   return (
     <ThemeProvider defaultTheme="light" storageKey="theme">
       <RouterProvider router={router} />
