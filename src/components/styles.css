@@ -6,10 +6,12 @@
 
 @keyframes shrink-x {
   from {
+    scale: 1;
     opacity: 1;
     transform: translateY(0%);
   }
   to {
+    scale: 0;
     opacity: 0;
     transform: translateY(-50%);
   }
@@ -17,18 +19,29 @@
 
 @keyframes grow-x {
   from {
+    scale: 0;
     opacity: 0;
     transform: translateY(50%);
   }
   to {
+    scale: 1;
     opacity: 1;
     transform: translateY(0%);
   }
 }
 
+::view-transition-new(root) {
+  animation: none;
+  animation-duration: 0;
+}
+::view-transition-old(root) {
+  animation: none;
+}
+
 ::view-transition-new(fade) {
   animation: grow-x 0.25s;
 }
+
 ::view-transition-old(fade) {
   animation: shrink-x 0.25s;
 }

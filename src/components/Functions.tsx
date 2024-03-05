@@ -63,7 +63,7 @@ export const Functions = () => {
           </div>
         );
     }
-  }, [selectedIndex]);
+  }, [selectedIndex, t]);
 
   const handleSelect = useCallback(
     (index: number) => {

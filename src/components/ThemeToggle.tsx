@@ -4,19 +4,15 @@ import { Button } from "@/components/ui/button";
 
 import { useCallback } from "react";
 import { useTheme } from "@/components/ThemeProvider.tsx";
-import { useViewTransition } from "@/hooks/useViewTransition";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const transition = useViewTransition();
   const handleToggle = useCallback(() => {
-    transition(() => {
-      if (theme === "dark") {
-        setTheme("light");
-      } else {
-        setTheme("dark");
-      }
-    });
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
   }, [setTheme, theme]);
 
   return (
