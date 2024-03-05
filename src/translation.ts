@@ -50,8 +50,8 @@ const resources = {
       support_content_4: "For all further questions you are welcome to contact",
       support_content_5: "We will be happy to help you as soon as possible.",
       support_content_6: "Thank you for your trust and for using Pure Weight!",
-      supportr_help_1: "Settings",
-      support_help_2: "Help",
+      support_help_1: "Settings",
+      support_help_2: "Manual",
     },
   },
   de: {
@@ -95,7 +95,7 @@ const resources = {
       agb: "Allgemeine Geschäftsbedingungen",
       datenschutz: "Datenschutzerklärung",
       imprint: "Impressum",
-      supportr_help_1: "Einstellungen",
+      support_help_1: "Einstellungen",
       support_help_2: "Bedienhilfe",
       support_content_1: "Eine generelle Bedienhilfe findest Du innerhalb von Pure Weight unter",
       support_content_2:

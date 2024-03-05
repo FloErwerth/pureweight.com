@@ -9,7 +9,7 @@ export const Support = () => {
       <div className="pt-5">
         {t("support_content_1")}{" "}
         <span className="bg-[#222] text-[#ddd] p-1 rounded-[5px]">
-          Einstellungen &#62; Bedienhilfe
+          {t("support_help_1")} &#62; {t("support_help_2")}
         </span>
         . {t("support_content_2")}.
       </div>
