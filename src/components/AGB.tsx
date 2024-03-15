@@ -53,16 +53,39 @@ const AgbEnglisch = () => {
           to expand or limit it.
         </p>
         <h2>3. Conclusion of the contract</h2>
-        <h3>3.1. Buying the app</h3>
-        <p>
-          The purchase of the app is only possible through the apple app store. After buying the
-          app, the app can be downloaded. The prices are listed in the app store.
-        </p>
+        <h3>3.1. Downloading the app</h3>
+        <p>The app must first be downloaded.</p>
         <h3>3.2 Subscription</h3>
-        <p>There are no subscriptions available at the moment.</p>
         <p>
-          A refund is possible for the first 14 days after the purchase. Further information are
-          available under 6. Right of withdrawal
+          A subscription is required for the use of the app. The subscription fee is due in advance
+          for the respective billing period.
+        </p>
+        <p>There are two subscription models:</p>
+        <p>
+          <li>Monthly subscription</li>
+          <li>Annual subscription</li>
+        </p>
+        <p>After confirming the subscription in the App Store, the contract is concluded.</p>
+        <p>
+          Both subscription variants are preceded by a trial phase. During this trial phase, you can
+          use the app with all features free of charge. The term of your subscription only begins
+          after the trial phase has expired and you have not canceled the subscription via the App
+          Store during this trial phase.
+        </p>
+        <p>
+          The subscription can be canceled at any time. The cancellation must be made via the App
+          Store. The cancellation takes effect at the end of the current billing period. After the
+          end of the billing period, the subscription will not be renewed and the app can no longer
+          be used.
+        </p>
+        <h3>3.3 Buying the app</h3>
+        <p>
+          The full functionality of the app can also be purchased. After paying the purchase price,
+          the contract is concluded.
+        </p>
+        <p>
+          You can withdraw from the purchase within 14 days without giving any reason. The
+          cancellation can be made via the App Store.
         </p>
         <h2>4. Your obligations</h2>
         <h3>4.1. Health requirements</h3>
@@ -328,16 +351,39 @@ export const AGB = () => {
           insbesondere zu erweitern oder zu beschränken.
         </p>
         <h2>3. Zustandekommen des Vertrages</h2>
-        <h3>3.1. Kauf der App</h3>
-        <p>
-          Die App kann nur über den App Store gekauft werden. Nachdem die App gekauft wurde, kann
-          die App heruntergeladen werden.
-        </p>
+        <h3>3.1. Herunterladen der App</h3>
+        <p>Die App muss zunächst heruntergeladen werden.</p>
         <h3>3.2 Abonnement</h3>
-        <p>Aktuell gibt es keine Abo-Modelle.</p>
         <p>
-          Der Rücktritt vom Verkauf ist innerhalb von 14 Tagen möglich. Näheres dazu unter 6.
-          Widerrufsbelehrung. Der aktuelle Preis kann im App Store angesehen werden.
+          Für die Nutzung der App ein Abonnement erforderlich. Die Abonnementgebühr wird im Voraus
+          für den jeweiligen Abrechnungszeitraum fällig.
+        </p>
+        <p>Es gibt zwei Abo-Modelle:</p>
+        <p>
+          <li>Monatliches Abonements</li>
+          <li>Jährliches Abonnement</li>
+        </p>
+        <p>Nach dem Bestätigen des Abonnements im App Store kommt der Vertrag zustande.</p>
+        <p>
+          Beiden Abonnement-Varianten ist eine Testphase vorgeschaltet. Während dieser Testphase
+          kannst du die App kostenlos im vollem Umfang nutzen. Die Laufzeit deines Abonnements
+          beginnt erst nachdem die Zeit der Testphase verstrichen ist und du das Abonnement während
+          dieser Testphase nicht über den App Store gekündigt hast.
+        </p>
+        <p>
+          Die Kündigung des Abonnements ist jederzeit möglich. Die Kündigung muss über den App Store
+          erfolgen. Die Kündigung wird wirksam zum Ende des laufenden Abrechnungszeitraums. Nach
+          Ablauf des Abrechnungszeitraums wird das Abonnement nicht mehr verlängert und die App kann
+          nicht mehr genutzt werden.
+        </p>
+        <h3>3.3 Kauf der App</h3>
+        <p>
+          Die volle Funktionsumfang der App kann auch gekauft werden. Nach dem Bezahlen des
+          Kaufbetrags kommt der Vertrag zustande.
+        </p>
+        <p>
+          Von dem Kauf kann innerhalb von 14 Tagen ohne Angabe von Gründen zurückgetreten werden.
+          Die Kündigung kann über den App Store erfolgen.
         </p>
         <h2>4. Deine Pflichten</h2>
         <h3>4.1. Gesundheitliche Voraussetzungen</h3>
@@ -382,7 +428,18 @@ export const AGB = () => {
           Übersicht der aktuellen Preise findest du in der App-Beschreibung des App Stores.
         </p>
         <h3>5.2. Fälligkeit der Zahlungen</h3>
-        <p>Die Zahlung ist direkt beim Kauf der App zu tätigen.</p>
+        <p>
+          Bei einem Abonnement mit einer Laufzeit von einem Monat ist die Zahlung jeweils zu Beginn
+          des Abrechnungsmonats sofort im Voraus fällig.
+        </p>
+        <p>
+          Bei einem Abonnement mit einer Laufzeit von zwölf Monaten ist die Zahlung jeweils zu
+          Beginn des Abrechnungsjahres sofort im Voraus fällig.
+        </p>
+        <p>
+          Der erste Abrechnungszeitraum beginnt an dem Tag, an dem du ein Abonnement abgeschlossen
+          und somit einen Vertrag geschlossen hast.
+        </p>
         <h2>6. Widerrufsbelehrung</h2>
         <h3>6.1. Widerrufsrecht</h3>
         <p>
