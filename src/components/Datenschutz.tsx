@@ -101,11 +101,17 @@ export const DatenschutzEnglisch = () => {
         <h2>4. Establishment of a contractual relationship</h2>
         <h3>4.1. Description and scope of data processing</h3>
         <p>
-          The subscription is concluded via the Apple-operated App Store. There, the relevant data
-          such as your e.g. your Apple ID or your payment information are processed and stored in
-          order to enable payment and use of the subscription.
+          The subscription is concluded via the App Store operated by Apple. The relevant data such
+          as your Apple ID, date of purchase, start and end date or your payment information are
+          processed and stored there in order to enable payment and use of the subscription. We use
+          the service RevenueCat (RevenueCat, Inc. 633 Tarava St. Suite 101, San Francisco, CA
+          94116, USA) to transmit the subscription purchases.
         </p>
-        <p>The privacy policy of Apple can be found here: https://www.apple.com/de/privacy</p>
+
+        <p>
+          The privacy policy of Apple can be found here: https://www.apple.com/de/privacy <br />
+          The privacy policy of RevenueCat can be found here: https://www.revenuecat.com/privacy
+        </p>
         <h3>4.2. Legal basis for data processing</h3>
         <p>
           The legal basis for the processing of personal data is Art. 6 para. 1 lit. b DSGVO, since
@@ -118,8 +124,12 @@ export const DatenschutzEnglisch = () => {
         </p>
         <h3>4.4. Duration of storage</h3>
         <p>
-          The duration of data storage can be found in Apple's privacy policy
-          (https://www.apple.com/de/privacy).
+          The duration of data storage can be found in Apple's privacy policy and in the privacy
+          policy of RevenueCat.
+        </p>
+        <p>
+          The privacy policy of Apple can be found here: https://www.apple.com/de/privacy <br />
+          The privacy policy of RevenueCat can be found here: https://www.revenuecat.com/privacy
         </p>
         <h3>4.5 Objection and elimination option</h3>
         <p>
