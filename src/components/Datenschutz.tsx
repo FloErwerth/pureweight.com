@@ -471,13 +471,17 @@ export const Datenschutz = () => {
             <h3>4.1. Beschreibung und Umfang der Datenverarbeitung</h3>
             <p>
               Das Abonement wird über den von Apple betriebenen App Store abgeschlossen. Dort werden
-              die relevanten Daten wie deine z.B. deine Apple ID oder deine Zahlungsinformationen
-              verarbeitet und gespeichert, um die Zahlung und die Nutzung des Abonements zu
-              ermöglichen.
+              die relevanten Daten wie deine z.B. deine Apple ID, Kaufdatum, Anfangs- und Enddatum
+              oder deine Zahlungsinformationen verarbeitet und gespeichert, um die Zahlung und die
+              Nutzung des Abonements zu ermöglichen. Für die Übermittlung der Abonnement-Abschlüsse
+              nutzen wir den Dienst RevenueCat (RevenueCat, Inc. 633 Tarava St. Suite 101, San
+              Francisco, CA 94116, USA).
             </p>
             <p>
               Die Datenschutzerklärung von Apple ist hier zu finden:
-              https://www.apple.com/de/privacy
+              https://www.apple.com/de/privacy <br />
+              Die Datenschutzerklärung von RevenueCat ist hier zu finden:
+              https://www.revenuecat.com/privacy
             </p>
             <h3>4.2. Rechtsgrundlage für die Datenverarbeitung</h3>
             <p>
@@ -493,8 +497,10 @@ export const Datenschutz = () => {
             </p>
             <h3>4.4. Dauer der Speicherung</h3>
             <p>
-              Die Dauer der Datenspeicherung findest Du in der Datenschutzerklärung von Apple
-              (https://www.apple.com/de/privacy).
+              Die Dauer der Datenspeicherung findest Du in der Datenschutzerklärung von Apple bzw.
+              in der Datenschutzerklärung von RevenueCat. Die Datenschutzerklärung von Apple ist
+              hier zu finden: https://www.apple.com/de/privacy Die Datenschutzerklärung von
+              RevenueCat ist hier zu finden: https://www.revenuecat.com/privacy
             </p>
             <h3>4.5 Widerspruchs- und Beseitigungsmöglichkeit</h3>
             <p>
