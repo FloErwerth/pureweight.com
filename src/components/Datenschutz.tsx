@@ -134,7 +134,7 @@ export const DatenschutzEnglisch = () => {
         </p>
         <h2>6. Rights of the data subject</h2>
 
-        <h3>6.1 Auskunftsrecht</h3>
+        <h3>6.1 Rights for information</h3>
         <p>
           You can request confirmation from the person responsible as to whether personal data
           concerning you is being processed by us. If such processing is available, you can request
