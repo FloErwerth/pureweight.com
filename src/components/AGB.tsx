@@ -78,6 +78,15 @@ const AgbEnglisch = () => {
           end of the billing period, the subscription will not be renewed and the app can no longer
           be used.
         </p>
+        <h3>3.3 Buying the app</h3>
+        <p>
+          The full functionality of the app can also be purchased. After paying the purchase price,
+          the contract is concluded.
+        </p>
+        <p>
+          You can withdraw from the purchase within 14 days without giving any reason. The
+          cancellation can be made via the App Store.
+        </p>
         <h2>4. Your obligations</h2>
         <h3>4.1. Health requirements</h3>
         <p>
@@ -366,6 +375,15 @@ export const AGB = () => {
           erfolgen. Die Kündigung wird wirksam zum Ende des laufenden Abrechnungszeitraums. Nach
           Ablauf des Abrechnungszeitraums wird das Abonnement nicht mehr verlängert und die App kann
           nicht mehr genutzt werden.
+        </p>
+        <h3>3.3 Kauf der App</h3>
+        <p>
+          Die volle Funktionsumfang der App kann auch gekauft werden. Nach dem Bezahlen des
+          Kaufbetrags kommt der Vertrag zustande.
+        </p>
+        <p>
+          Von dem Kauf kann innerhalb von 14 Tagen ohne Angabe von Gründen zurückgetreten werden.
+          Die Kündigung kann über den App Store erfolgen.
         </p>
         <h2>4. Deine Pflichten</h2>
         <h3>4.1. Gesundheitliche Voraussetzungen</h3>

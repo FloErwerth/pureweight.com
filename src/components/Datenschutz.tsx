@@ -101,11 +101,17 @@ export const DatenschutzEnglisch = () => {
         <h2>4. Establishment of a contractual relationship</h2>
         <h3>4.1. Description and scope of data processing</h3>
         <p>
-          The subscription is concluded via the Apple-operated App Store. There, the relevant data
-          such as your e.g. your Apple ID or your payment information are processed and stored in
-          order to enable payment and use of the subscription.
+          The subscription is concluded via the App Store operated by Apple. The relevant data such
+          as your Apple ID, date of purchase, start and end date or your payment information are
+          processed and stored there in order to enable payment and use of the subscription. We use
+          the service RevenueCat (RevenueCat, Inc. 633 Tarava St. Suite 101, San Francisco, CA
+          94116, USA) to transmit the subscription purchases.
         </p>
-        <p>The privacy policy of Apple can be found here: https://www.apple.com/de/privacy</p>
+
+        <p>
+          The privacy policy of Apple can be found here: https://www.apple.com/de/privacy <br />
+          The privacy policy of RevenueCat can be found here: https://www.revenuecat.com/privacy
+        </p>
         <h3>4.2. Legal basis for data processing</h3>
         <p>
           The legal basis for the processing of personal data is Art. 6 para. 1 lit. b DSGVO, since
@@ -118,8 +124,12 @@ export const DatenschutzEnglisch = () => {
         </p>
         <h3>4.4. Duration of storage</h3>
         <p>
-          The duration of data storage can be found in Apple's privacy policy
-          (https://www.apple.com/de/privacy).
+          The duration of data storage can be found in Apple's privacy policy and in the privacy
+          policy of RevenueCat.
+        </p>
+        <p>
+          The privacy policy of Apple can be found here: https://www.apple.com/de/privacy <br />
+          The privacy policy of RevenueCat can be found here: https://www.revenuecat.com/privacy
         </p>
         <h3>4.5 Objection and elimination option</h3>
         <p>
@@ -471,13 +481,17 @@ export const Datenschutz = () => {
             <h3>4.1. Beschreibung und Umfang der Datenverarbeitung</h3>
             <p>
               Das Abonement wird über den von Apple betriebenen App Store abgeschlossen. Dort werden
-              die relevanten Daten wie deine z.B. deine Apple ID oder deine Zahlungsinformationen
-              verarbeitet und gespeichert, um die Zahlung und die Nutzung des Abonements zu
-              ermöglichen.
+              die relevanten Daten wie deine z.B. deine Apple ID, Kaufdatum, Anfangs- und Enddatum
+              oder deine Zahlungsinformationen verarbeitet und gespeichert, um die Zahlung und die
+              Nutzung des Abonements zu ermöglichen. Für die Übermittlung der Abonnement-Abschlüsse
+              nutzen wir den Dienst RevenueCat (RevenueCat, Inc. 633 Tarava St. Suite 101, San
+              Francisco, CA 94116, USA).
             </p>
             <p>
               Die Datenschutzerklärung von Apple ist hier zu finden:
-              https://www.apple.com/de/privacy
+              https://www.apple.com/de/privacy <br />
+              Die Datenschutzerklärung von RevenueCat ist hier zu finden:
+              https://www.revenuecat.com/privacy
             </p>
             <h3>4.2. Rechtsgrundlage für die Datenverarbeitung</h3>
             <p>
@@ -493,8 +507,10 @@ export const Datenschutz = () => {
             </p>
             <h3>4.4. Dauer der Speicherung</h3>
             <p>
-              Die Dauer der Datenspeicherung findest Du in der Datenschutzerklärung von Apple
-              (https://www.apple.com/de/privacy).
+              Die Dauer der Datenspeicherung findest Du in der Datenschutzerklärung von Apple bzw.
+              in der Datenschutzerklärung von RevenueCat. Die Datenschutzerklärung von Apple ist
+              hier zu finden: https://www.apple.com/de/privacy Die Datenschutzerklärung von
+              RevenueCat ist hier zu finden: https://www.revenuecat.com/privacy
             </p>
             <h3>4.5 Widerspruchs- und Beseitigungsmöglichkeit</h3>
             <p>
