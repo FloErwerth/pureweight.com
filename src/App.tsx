@@ -4,12 +4,13 @@ import { Main } from "@/pages/main.tsx";
 import { HeadlineContent } from "./components/HeadlineContent";
 import { Functions } from "@/components/Functions.tsx";
 import { FunctionAccordion } from "./components/FunctionsAccordion";
-import { Footer } from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Support } from "./pages/support";
 import "./translation";
 import * as i18n from "./translation";
 import { useEffect } from "react";
+import { AGBContent } from "./components/ui/AGBContents";
+import { PrivacyContent } from "@/components/ui/PrivacyContents.tsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,28 @@ const router = createBrowserRouter([
       </div>
     ),
   },
+  {
+    path: "/termsandconditions",
+    element: (
+      <div>
+        <Main>
+          <Header />
+          <AGBContent />
+        </Main>
+      </div>
+    ),
+  },
+  {
+    path: "/privacy",
+    element: (
+      <div>
+        <Main>
+          <Header />
+          <PrivacyContent />
+        </Main>
+      </div>
+    ),
+  },
 ]);
 
 function App() {
@@ -52,7 +75,6 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="theme">
       <RouterProvider router={router} />
-      <Footer />
     </ThemeProvider>
   );
 }
