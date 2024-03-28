@@ -8,11 +8,20 @@ type CallToActionProps = {
   classNames?: ClassNameValue;
 };
 export const CallToAction = ({ classNames, variant = "normal" }: CallToActionProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
   const handleEnrollToEmailList = useCallback(() => {
-    //TODO
-    console.log("ENROLL");
-  }, []);
+    let link: string = "";
+    if (i18n.language === "de") {
+      link = `https://apps.apple.com/de/app/pure-weight/id6469710434`;
+    }
+
+    if (i18n.language === "en") {
+      link = `https://apps.apple.com/us/app/pure-weight/id6469710434`;
+    }
+
+    window.location.href = link;
+  }, [i18n.language]);
 
   const largeClasses = "px-12 py-4 text-2xl";
   const mergedClasses = twMerge(
