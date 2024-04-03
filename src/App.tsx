@@ -11,6 +11,7 @@ import * as i18n from "./translation";
 import { useEffect } from "react";
 import { AGBContent } from "./components/ui/AGBContents";
 import { PrivacyContent } from "@/components/ui/PrivacyContents.tsx";
+import { Footer } from "@/components/Footer.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
           <HeadlineContent />
           <Functions />
           <FunctionAccordion />
+          <Footer />
         </Main>
       </div>
     ),
@@ -33,6 +35,7 @@ const router = createBrowserRouter([
         <Main>
           <Header />
           <Support />
+          <Footer />
         </Main>
       </div>
     ),
@@ -44,6 +47,7 @@ const router = createBrowserRouter([
         <Main>
           <Header />
           <AGBContent />
+          <Footer />
         </Main>
       </div>
     ),
@@ -55,6 +59,7 @@ const router = createBrowserRouter([
         <Main>
           <Header />
           <PrivacyContent />
+          <Footer />
         </Main>
       </div>
     ),

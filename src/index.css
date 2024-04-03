@@ -6,6 +6,10 @@ p {
   padding: 10px;
 }
 
+* {
+  outline: 1px solid #f00 !important;
+}
+
 h2 {
   padding-top: 40px;
   font-weight: bold;

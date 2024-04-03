@@ -1,18 +1,21 @@
 import graph from "../media/graph.png";
 import push_workout from "../media/push_workout.png";
 import overview from "../media/overview.png";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import "./styles.css";
-import { useViewTransition } from "@/hooks/useViewTransition";
 import { useTranslation } from "react-i18next";
 
 export const Functions = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const transitionView = useViewTransition();
   const { t } = useTranslation();
   const pic1Ref = useRef<HTMLButtonElement>(null);
   const pic2Ref = useRef<HTMLButtonElement>(null);
   const pic3Ref = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const middleOfScreen = document.documentElement.clientWidth / 2;
+    pic1Ref.current?.scrollTo({ left: middleOfScreen, behavior: "smooth" });
+  }, []);
 
   const getImageClass = useCallback(
     (index: number) => {
@@ -89,9 +92,9 @@ export const Functions = () => {
         }
       }
 
-      transitionView(() => setSelectedIndex(index));
+      setSelectedIndex(index);
     },
-    [pic1Ref, pic2Ref, pic3Ref, selectedIndex, transitionView],
+    [pic1Ref, pic2Ref, pic3Ref, selectedIndex],
   );
 
   return (
@@ -102,7 +105,7 @@ export const Functions = () => {
       </div>
       <div
         style={{ scrollbarWidth: "none" }}
-        className="grid lg:justify-between lg:h-fit grid-cols-[max-content_max-content_max-content] max-lg:px-[25vw] max-lg:overflow-x-auto max-lg:overflow-y-hidden"
+        className="grid lg:justify-between lg:h-fit grid-cols-[max-content_max-content_max-content] max-lg:px-[16px] max-lg:overflow-x-auto max-lg:overflow-y-hidden"
       >
         <button
           className="max-lg:h-[calc(75vh-40px)] max-lg:overflow-hidden"

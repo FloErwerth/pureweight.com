@@ -29,20 +29,10 @@ export const Footer = () => {
         <Impressum />
         <div className="flex flex-col h-[30px]">
           <button onClick={navigateToPrivacy} style={{ all: "unset" }}>
-            <Link
-              href=""
-              scrollsToAnchor
-              classNames="max-lg:text-[30px] text-[#ddd]"
-              text={t("datenschutz")}
-            />
+            <Link href="" scrollsToAnchor classNames="text-[#ddd]" text={t("datenschutz")} />
           </button>
           <button onClick={navigateToTerms} style={{ all: "unset" }}>
-            <Link
-              href=""
-              scrollsToAnchor
-              classNames="max-lg:text-[30px] text-[#ddd]"
-              text={t("agb")}
-            />
+            <Link href="" scrollsToAnchor classNames="text-[#ddd]" text={t("agb")} />
           </button>
         </div>
       </div>
